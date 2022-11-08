@@ -1,0 +1,204 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html {
+    box-sizing: border-box;
+}
+
+*,
+:after,
+:before {
+    box-sizing: inherit;
+}
+
+
+/* -------------------------------------------------- */
+
+/*
+pouzivame mobile first pristup
+tj. vychozi styly mimo media query jsou pro nejmensi mobilni zarizeni (telefony)
+s pribyvajici sirkou pridavame media query pro...
+tablety:
+@media (min-width: 480px) {
+}
+notebook/pc:
+@media (min-width: 860px) {
+}
+*/
+
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.paticka {
+    text-align: center;
+    font-size: 14px;
+    color: silver;
+}
+
+.paticka a {
+    color: silver;
+}
+
+
+/* ------------------------------- */
+/* ----- DOLE BUDE TVOJE CSS ----- */
+/* ------------------------------- */
+
+/* nadpisy */
+h1 {
+    font-family: "Raleway", sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: white;
+    padding: 10px;
+    margin: 0;
+}
+
+h2 {
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: white;
+    padding: 10px;
+    display: flex;
+    margin: 0;
+}
+
+/* hlavní recept */
+.hlavni-recept {
+    min-height: 200px;
+    background: url("images/burger.jpg");
+    background-size: cover;
+    background-position: center center;
+    margin: 0;
+    border-bottom: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* sekce */
+.sekce {
+    min-height: 90px;
+    list-style-type: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* sushi */
+.sushi {
+    background: url("images/sushi.jpg");
+}
+
+/* Drůbež */
+.drubez {
+    background: url("images/kure.jpg");
+}
+
+/* omáčky */
+.omacky {
+    background: url("images/rajcata.jpg");
+}
+
+/* grilování */
+.grilovani {
+    background: url("images/grilovani.jpg");
+}
+
+/* velikost malých receptů  */
+.sushi,
+.drubez,
+.grilovani,
+.omacky {
+    background-size: cover;
+    background-position: center center;
+    border-bottom: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* zarovnání položek ve flexboxu */
+.hlavni-recept,
+.sushi,
+.omacky {
+    display: flex;
+    order: -1;
+}
+
+/* paticka */
+.paticka p {
+    min-height: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+/* tablet */
+@media (min-width: 480px) {
+    h1 {
+        font-size: 36px;
+        font-weight: 800;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 22px;
+        font-weight: 800;
+        padding: 20px;
+    }
+
+    .hlavni-recept {
+        min-height: 250px;
+        background: url("images/burger.jpg");
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .sushi,
+    .drubez,
+    .grilovani,
+    .omacky {
+        min-height: 150px;
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
+/* pc */
+@media (min-width: 860px) {
+    h1 {
+        font-size: 48px;
+        font-weight: 800;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 28px;
+        font-weight: 800;
+        padding: 20px;
+    }
+
+    .hlavni-recept {
+        min-height: 400px;
+        background: url("images/burger.jpg");
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .sushi,
+    .drubez,
+    .grilovani,
+    .omacky {
+        min-height: 200px;
+        background-size: cover;
+        background-position: center center;
+    }
+}
