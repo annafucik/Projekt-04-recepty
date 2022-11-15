@@ -80,8 +80,8 @@ h2 {
     justify-content: space-between;
 }
 
-/* sekce */
-.sekce {
+/* popisek */
+.popisek {
     min-height: 90px;
     list-style-type: none;
     font-size: 14px;
@@ -136,13 +136,15 @@ h2 {
 
 /* paticka */
 .paticka p {
-    min-height: 30px;
+    height: 30px;
     margin: 0;
     padding: 0;
 }
 
 /* tablet */
 @media (min-width: 480px) {
+
+    /* nadpisy pro tablet */
     h1 {
         font-size: 36px;
         font-weight: 800;
@@ -155,11 +157,19 @@ h2 {
         padding: 20px;
     }
 
+    /* hlavní recept pro tablet */
     .hlavni-recept {
         min-height: 250px;
         background: url("images/burger.jpg");
         background-size: cover;
         background-position: center center;
+    }
+
+    /* malé recepty pro tablet */
+    .male-recepty {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .sushi,
@@ -169,11 +179,28 @@ h2 {
         min-height: 150px;
         background-size: cover;
         background-position: center center;
+        display: flex;
+        flex-basis: 50%;
+    }
+
+    .sushi,
+    .omacky {
+        border-right: 2px solid white;
+    }
+
+    /* zarovnání položek ve flexboxu pro tablet */
+    .hlavni-recept,
+    .sushi,
+    .omacky {
+        display: flex;
+        order: 0;
     }
 }
 
-/* pc */
+/* PC */
 @media (min-width: 860px) {
+
+    /* nadpisy pro PC */
     h1 {
         font-size: 48px;
         font-weight: 800;
@@ -186,13 +213,23 @@ h2 {
         padding: 20px;
     }
 
+    /* rozložení receptů pro PC */
+    .recepty-celek {
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* hlavní recept pro PC */
     .hlavni-recept {
         min-height: 400px;
         background: url("images/burger.jpg");
         background-size: cover;
         background-position: center center;
+        display: flex;
+        flex-basis: 100%;
     }
 
+    /* malé recepty pro PC */
     .sushi,
     .drubez,
     .grilovani,
@@ -200,5 +237,17 @@ h2 {
         min-height: 200px;
         background-size: cover;
         background-position: center center;
+        display: flex;
+        flex-basis: 50%;
     }
+
+    .hlavni-recept,
+    .sushi,
+    .omacky {
+        border-right: 2px solid white;
+    }
+
+
+
+
 }
